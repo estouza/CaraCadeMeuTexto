@@ -1,0 +1,16 @@
+﻿@page
+@model CaraCadeMeuTexto.Pages.IndexModel
+
+<h1>CaraCadêMeuTexto</h1>
+
+<p>Pesquise um termo em fontes históricas</p>
+
+<form method="get">
+    <input type="text" name="Termo" placeholder="Digite um termo..." />
+    <button type="submit">Buscar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Termo))
+{
+    <p>Você pesquisou por: <strong>@Model.Termo</strong></p>
+}
